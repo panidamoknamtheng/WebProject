@@ -33,11 +33,14 @@ import {
 
 //colors
 const { darkLight, brand, primary } = Colors;
+// keyboard avoiding view
+import KeyboardAvoidingWrapper from './../components/KeyboardAvoidingWrapper';
 
 const Login = () => {
     const [hidePassword, setHidePassword] = useState(true);
 
     return (
+        <KeyboardAvoidingWrapper>
         <StyledContainer>
             <StatusBar style="dark" />
             <InnerContainer>
@@ -98,6 +101,7 @@ const Login = () => {
 
             </InnerContainer>
         </StyledContainer>
+        </KeyboardAvoidingWrapper>
 
     );
 }
